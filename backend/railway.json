@@ -4,6 +4,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "bash -c 'alembic upgrade head; python -m src.seeder.seed_food_items; uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload'"
+    "startCommand": "bash -c 'alembic upgrade head; python -m src.seeders.seed_food_items; uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload'"
   }
 }
