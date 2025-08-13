@@ -4,7 +4,7 @@ A full-stack food ordering application built with FastAPI (backend) and React + 
 
 ## Quick Start
 
-### Backend Setup
+### Backend Setup without Docker
 
 ```bash
 cd backend
@@ -15,6 +15,14 @@ cp .env.example .env
 alembic upgrade head
 python scripts/seed_db.py
 uvicorn src.main:app --reload
+```
+
+### Backend Setup with Docker
+
+```bash
+cd backend
+docker compose up -d
+docker compose exec backend bash -c "python scripts/seed_db.py"
 ```
 
 ### Frontend Setup
